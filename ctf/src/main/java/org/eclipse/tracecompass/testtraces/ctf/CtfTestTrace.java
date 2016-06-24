@@ -235,7 +235,7 @@ public enum CtfTestTrace {
     DEBUG_INFO("/debuginfo-test-app2", 41, 1),
 
     /**
-     * UST Trace with Debug Info information, final LTTng 2.8 version
+     * UST Trace with Debug Info information, LTTng 2.8-rc2 version
      *
      * <pre>
      * Trace Size: 144 KB (including index/)
@@ -243,8 +243,63 @@ public enum CtfTestTrace {
      * Event count: 291
      * Trace length: ~2 s
      * </pre>
+     * 
+     * @deprecated Event fields has_debug_link and has_build_id have been added
+     *             after this trace was taken and before the final release.
      */
+    @Deprecated
     DEBUG_INFO3("/debuginfo-test-app3", 291, 2),
+
+    /**
+     * UST Trace with Debug Info information, final LTTng 2.8 version
+     *
+     * <pre>
+     * Trace Size: 52 KB (including index/)
+     * Tracer: lttng-ust 2.8
+     * Event count: 32
+     * Trace length: ~1 s
+     * </pre>
+     */
+    DEBUG_INFO4("/debuginfo-test-app4", 32, 1),
+
+    /**
+     * Synthetic UST trace simulating a process doing an exec, with debug
+     * information events.
+     *
+     * <pre>
+     * Trace Size: 36 KB
+     * Tracer: Babeltrace CTF writer trying to impersonate lttng-ust 2.8
+     * Event count: 9
+     * Trace length: ~1 s
+     * </pre>
+     */
+    DEBUG_INFO_SYNTH_EXEC("/debuginfo-synth-exec", 9, 1),
+
+    /**
+     * Synthetic UST trace simulating two processes doing a statedump
+     * simultaneously, with debug information events.
+     *
+     * <pre>
+     * Trace Size: 36 KB
+     * Tracer: Babeltrace CTF writer trying to impersonate lttng-ust 2.8
+     * Event count: 12
+     * Trace length: ~1 s
+     * </pre>
+     */
+    DEBUG_INFO_SYNTH_TWO_PROCESSES("/debuginfo-synth-two-processes", 12, 1),
+
+    /**
+     * Synthetic UST trace simulating various combination of binaries with build
+     * IDs and debug links, with debug information events.
+     *
+     * <pre>
+     * Trace Size: 36 KB
+     * Tracer: Babeltrace CTF writer trying to impersonate lttng-ust 2.8
+     * Event count: 20
+     * Trace length: ~1 s
+     * </pre>
+     */
+    DEBUG_INFO_SYNTH_BUILDID_DEBUGLINK("/debuginfo-synth-buildid-debuglink", 20, 1),
 
     /**
      * UST Trace with Memory analysis information
