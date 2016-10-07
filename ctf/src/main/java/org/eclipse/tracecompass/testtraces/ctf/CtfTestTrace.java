@@ -341,7 +341,35 @@ public enum CtfTestTrace {
      * Trace length: 0.432 662 358 s
      * </pre>
      */
-    MANY_THREADS("/many-threads", 240644, 1);
+    MANY_THREADS("/many-threads", 240644, 1),
+
+    /**
+     * Kernel trace of the "context-switch" experiment, which tests the clock
+     * offsetting of different traces taken on the same host with different
+     * clock offsets.
+     *
+     * <pre>
+     * Trace Size: 4.6 MB
+     * Tracer: lttng-kernel 2.6.3
+     * Event count: 241 566
+     * Trace length: ~92 s
+     * </pre>
+     */
+    CONTEXT_SWITCHES_KERNEL("/context-switches/context-switches-kernel", 241566, 92),
+
+    /**
+     * Userspace trace of the "context-switch" experiment, which tests the clock
+     * offsetting of different traces taken on the same host with different
+     * clock offsets.
+     *
+     * <pre>
+     * Trace Size: 136 KB
+     * Tracer: lttng-ust 2.6.3
+     * Event count: 3934
+     * Trace length: ~49 s
+     * </pre>
+     */
+    CONTEXT_SWITCHES_UST("/context-switches/context-switches-ust", 3934, 49);
 
 
     private final String fTraceName;
