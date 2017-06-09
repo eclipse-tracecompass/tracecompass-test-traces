@@ -369,7 +369,20 @@ public enum CtfTestTrace {
      * Trace length: ~49 s
      * </pre>
      */
-    CONTEXT_SWITCHES_UST("/context-switches/context-switches-ust", 3934, 49);
+    CONTEXT_SWITCHES_UST("/context-switches/context-switches-ust", 3934, 49),
+
+    /**
+     * Trace with streams of different start/end times, can be used to test the
+     * stream intersection operations.
+     *
+     * <pre>
+     * Trace Size: 364 KB
+     * Tracer: lttng-kernel 2.9.0
+     * Event count: 22
+     * Trace length: ~16 s
+     * </pre>
+     */
+    UNEVEN_STREAMS("/uneven-streams", 22, 16);
 
 
     private final String fTraceName;
