@@ -382,7 +382,7 @@ public enum CtfTestTrace {
      * Trace length: ~6 s
      * </pre>
      */
-    UNEVEN_STREAMS("/uneven-streams", 534619, 16);
+    UNEVEN_STREAMS("/uneven-streams", 534619, 6);
 
 
     private final String fTraceName;
