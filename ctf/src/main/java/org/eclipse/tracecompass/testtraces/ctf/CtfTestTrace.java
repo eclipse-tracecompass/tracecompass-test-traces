@@ -376,13 +376,13 @@ public enum CtfTestTrace {
      * stream intersection operations.
      *
      * <pre>
-     * Trace Size: 364 KB
-     * Tracer: lttng-kernel 2.9.0
-     * Event count: 22
-     * Trace length: ~16 s
+     * Trace Size: 19 MB
+     * Tracer: lttng-kernel 2.10.0
+     * Event count: 534619
+     * Trace length: ~6 s
      * </pre>
      */
-    UNEVEN_STREAMS("/uneven-streams", 22, 16);
+    UNEVEN_STREAMS("/uneven-streams", 534619, 16);
 
 
     private final String fTraceName;
