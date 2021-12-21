@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-   Copyright (C) 2015 EfficiOS Inc., Alexandre Montplaisir
+   Copyright (C) 2015, 2021 EfficiOS Inc., Alexandre Montplaisir, and others
 
    All rights reserved. This program and the accompanying materials
-   are made available under the terms of the Eclipse Public License v1.0
+   are made available under the terms of the Eclipse Public License 2.0
    which accompanies this distribution, and is available at
-   http://www.eclipse.org/legal/epl-v10.html
+   https://www.eclipse.org/legal/epl-2.0/
+
+   SPDX-License-Identifier: EPL-2.0
 -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
+  <licenses>
+    <license>
+      <name>Eclipse Public License 2.0</name>
+      <comments>
+        All rights reserved. This program and the accompanying materials are
+        made available under the terms of the Eclipse Public License 2.0 which
+        accompanies this distribution, and is available at
+        https://www.eclipse.org/legal/epl-2.0/
+
+        SPDX-License-Identifier: EPL-2.0
+      </comments>
+    </license>
+  </licenses>
 
   <prerequisites>
     <maven>3.0.5</maven>
@@ -18,7 +34,7 @@
 
   <groupId>org.eclipse.tracecompass.testtraces</groupId>
   <artifactId>tracecompass-test-traces-parent</artifactId>
-  <version>1.7.2</version>
+  <version>1.8.0</version>
   <packaging>pom</packaging>
 
   <properties>
@@ -28,6 +44,7 @@
 
   <modules>
     <module>ctf</module>
+    <module>ftrace</module>
     <module>update-site</module>
   </modules>
 

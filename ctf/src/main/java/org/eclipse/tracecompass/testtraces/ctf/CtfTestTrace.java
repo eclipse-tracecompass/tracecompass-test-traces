@@ -1,10 +1,12 @@
 /*******************************************************************************
- * Copyright (c) 2013, 2015 Ericsson, Efficios Inc.
+ * Copyright (c) 2013, 2021 Ericsson, Efficios Inc and others
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
+ * All rights reserved. This program and the accompanying materials are
+ * made available under the terms of the Eclipse Public License 2.0 which
+ * accompanies this distribution, and is available at
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
  *******************************************************************************/
 
 package org.eclipse.tracecompass.testtraces.ctf;
@@ -226,7 +228,7 @@ public enum CtfTestTrace {
 	 * Event count: 41
 	 * Trace length: ~1 s
 	 * </pre>
-	 * 
+	 *
 	 * @deprecated Some event names were changed between the moment this trace
 	 *             was taken, and the final LTTng 2.8 release. Please use the
 	 *             updated {@link #DEBUG_INFO3} trace instead.
@@ -243,7 +245,7 @@ public enum CtfTestTrace {
      * Event count: 291
      * Trace length: ~2 s
      * </pre>
-     * 
+     *
      * @deprecated Event fields has_debug_link and has_build_id have been added
      *             after this trace was taken and before the final release.
      */
