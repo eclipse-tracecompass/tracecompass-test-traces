@@ -18,7 +18,7 @@
 
   <groupId>org.eclipse.tracecompass.testtraces</groupId>
   <artifactId>tracecompass-test-traces-parent</artifactId>
-  <version>1.7.2</version>
+  <version>1.8.0</version>
   <packaging>pom</packaging>
 
   <properties>
@@ -28,6 +28,7 @@
 
   <modules>
     <module>ctf</module>
+    <module>ftrace</module>
     <module>update-site</module>
   </modules>
 
