@@ -39,7 +39,7 @@
   <packaging>pom</packaging>
 
   <properties>
-    <p2-deploy-destination>/home/data/httpd/archive.eclipse.org/tracecompass/tracecompass-test-traces/repository/latest/</p2-deploy-destination>
+    <p2-deploy-destination>${siteDestination}/tracecompass/tracecompass-test-traces/repository/latest/</p2-deploy-destination>
   </properties>
 
   <pluginRepositories>

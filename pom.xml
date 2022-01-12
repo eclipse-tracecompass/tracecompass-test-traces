@@ -39,7 +39,8 @@
 
   <properties>
     <manifest-location>META-INF</manifest-location>
-    <maven-deploy-destination>file:///home/data/httpd/archive.eclipse.org/tracecompass/tracecompass-test-traces/maven/</maven-deploy-destination>
+    <siteDestination>/home/data/httpd/archive.eclipse.org</siteDestination>
+    <maven-deploy-destination>file:///${siteDestination}/tracecompass/tracecompass-test-traces/maven/</maven-deploy-destination>
   </properties>
 
   <modules>
