@@ -29,8 +29,53 @@ public enum FtraceTestTrace {
      * Kernel version: 5.2
      * Trace length: 1s
      * </pre>
+     * The file is obtained by running trace-cmd for the ls command: trace-cmd
+     * record -e all ls on a machine with 4 CPU cores.
      */
-    TEST_2_6_4_CPU("/2.6/trace_4cpu.dat", 2880, 1);
+    TEST_2_6_4_CPU("/2.6/trace_4cpu.dat", 2880, 1),
+
+    /**
+     * <pre>
+     * Trace Size: 6.4 MB
+     * Tracer: FTrace 2.6
+     * Event count: 1
+     * Kernel version: 5.2
+     * Trace length: 1s
+     * </pre>
+     * The file containing a single event to parse. For this file, I followed the
+     * example in the man pages for event_fd
+     * (https://man7.org/linux/man-pages/man2/eventfd.2.html). To obtain the trace,
+     * run trace-cmd while running the example with the flag -e sys_enter_eventfd2.
+     * This event should occur only once.
+     */
+    TEST_2_6_SINGLE_EVENT("/2.6/trace_single_event.dat", 1, 1),
+
+    /**
+     * <pre>
+     * Trace Size: 7.9 MB
+     * Tracer: FTrace 2.6
+     * Event count: -
+     * Kernel version: 5.2
+     * Trace length: -
+     * </pre>
+     * An invalid ftrace with bad version header, generated using trace-cmd 2.8.
+     * Trace-cmd has bugs that cause bad header issue.
+     */
+    TEST_2_6_INVALID("/2.6/trace_invalid.dat", 0, 0),
+
+    /**
+     * <pre>
+     * Trace Size: 7.1 MB
+     * Tracer: FTrace 2.6
+     * Event count: 0
+     * Kernel version: 5.2
+     * Trace length: 0s
+     * </pre>
+     * The file is obtained by running trace-cmd for the ls command: trace-cmd
+     * record -e sys_enter_eventfd2 ls. The ls command should be cause an
+     * sys_enter_eventfd2 to happen.
+     */
+    TEST_2_6_EMPTY("/2.6/empty_trace.dat", 0, 0);
 
     private final String fTraceName;
     private final int fNbEvent;
