@@ -60,6 +60,7 @@ public enum FtraceTestTrace {
      * Kernel version: 5.2
      * Trace length: -
      * </pre>
+     *
      * An invalid ftrace with bad version header, generated using trace-cmd 2.8.
      * Trace-cmd has bugs that cause bad header issue.
      */
@@ -73,11 +74,42 @@ public enum FtraceTestTrace {
      * Kernel version: 5.2
      * Trace length: 0s
      * </pre>
+     *
      * The file is obtained by running trace-cmd for the ls command: trace-cmd
      * record -e sys_enter_eventfd2 ls. The ls command should be cause an
      * sys_enter_eventfd2 to happen.
      */
-    TEST_2_6_EMPTY("/2.6/empty_trace.dat", 0, 0);
+    TEST_2_6_EMPTY("/2.6/empty_trace.dat", 0, 0),
+
+    /**
+     * <pre>
+     * Trace Size: 8 MB
+     * Tracer: FTrace 2.6
+     * Event count: 2880
+     * Kernel version: 5.2
+     * Trace length: 1s
+     * </pre>
+     *
+     * This file is an injected trace, the size of the Header Page section of this
+     * trace file is injected to make it larger than the size of the file. This
+     * trace is modified from {@link FtraceTestTrace#TEST_2_6_4_CPU}.
+     */
+    TEST_2_6_BAD_HEADER_PAGE_SECTION_SIZE("/2.6/trace_injected_header.dat", 2880, 1),
+
+    /**
+     * <pre>
+     * Trace Size: 8 MB
+     * Tracer: FTrace 2.6
+     * Event count: 2880
+     * Kernel version: 5.2
+     * Trace length: 1s
+     * </pre>
+     *
+     * This file is an injected trace, the size of the first CPU section of this
+     * trace file is injected to make it larger than the size of the file. This
+     * trace is modified from {@link FtraceTestTrace#TEST_2_6_4_CPU}.
+     */
+    TEST_2_6_BAD_CPU_SECTION_SIZE("/2.6/trace_injected_cpu.dat", 2880, 1);
 
     private final String fTraceName;
     private final int fNbEvent;
