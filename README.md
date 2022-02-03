@@ -14,10 +14,9 @@ For example:
 
     mvn clean deploy -Dmaven-deploy-destination=file:///var/www/traces/maven -Dp2-deploy-destination=/var/www/traces/repository
 
-(Note that the first property needs a `file:///` scheme, but the second does not.) 
+(Note that the first property needs a `file:///` scheme, but the second does not.)
 
 You can then point depending projects to these locations.
-
 
 Adding a new CTF test trace
 ---------------------------
@@ -37,7 +36,6 @@ Trace Compass unit tests. This is a known issue.
 
 Finally, bump the project's minor version (1.1.0 -> 1.2.0) in the main pom.xml
 and related `<parent>` blocks.
-
 
 Deploying the repo and update site
 ----------------------------------
@@ -66,5 +64,3 @@ multi-version deploying automatically.
 
 [Maven standard directory layout]: https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
 [p2 composite repository]: https://wiki.eclipse.org/Equinox/p2/Composite_Repositories_%28new%29
-
-
