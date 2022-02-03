@@ -14,7 +14,6 @@ package org.eclipse.tracecompass.testtraces.ftrace;
 
 import static org.junit.Assert.assertNotNull;
 
-import org.eclipse.tracecompass.testtraces.ftrace.FtraceTestTrace;
 import org.junit.Test;
 
 /**
