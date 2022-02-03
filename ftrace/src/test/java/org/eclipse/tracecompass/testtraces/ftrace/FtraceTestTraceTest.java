@@ -9,7 +9,6 @@
  * SPDX-License-Identifier: EPL-2.0
  *******************************************************************************/
 
-
 package org.eclipse.tracecompass.testtraces.ftrace;
 
 import static org.junit.Assert.assertNotNull;

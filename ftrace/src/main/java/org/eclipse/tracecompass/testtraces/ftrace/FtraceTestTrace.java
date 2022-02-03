@@ -29,6 +29,7 @@ public enum FtraceTestTrace {
      * Kernel version: 5.2
      * Trace length: 1s
      * </pre>
+     *
      * The file is obtained by running trace-cmd for the ls command: trace-cmd
      * record -e all ls on a machine with 4 CPU cores.
      */
@@ -42,6 +43,7 @@ public enum FtraceTestTrace {
      * Kernel version: 5.2
      * Trace length: 1s
      * </pre>
+     *
      * The file containing a single event to parse. For this file, I followed the
      * example in the man pages for event_fd
      * (https://man7.org/linux/man-pages/man2/eventfd.2.html). To obtain the trace,

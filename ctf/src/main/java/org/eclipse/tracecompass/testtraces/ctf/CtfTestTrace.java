@@ -46,8 +46,8 @@ public enum CtfTestTrace {
     TRACE2("/trace2", 595641, 11),
 
     /**
-     * Kernel trace with event contexts: pid, ppid, tid, procname,
-     * perf_page_fault, perf_major_faults, perf_minor_faults
+     * Kernel trace with event contexts: pid, ppid, tid, procname, perf_page_fault,
+     * perf_major_faults, perf_minor_faults
      *
      * <pre>
      * Trace Size: 56 MB
@@ -92,10 +92,10 @@ public enum CtfTestTrace {
     SYNC_DEST("/synctraces/scp_dest", 85729, 17),
 
     /**
-     * LTTng Kernel trace. Contains 'inet_sock_local_*' events provided by
-     * Francis's Giraldeau lttng-modules addons branch to trace TCP events. Can
-     * be used along with {@link CtfTestTrace#DJANGO_DB} and
-     * {@link CtfTestTrace#DJANGO_HTTPD} for trace synchronization.
+     * LTTng Kernel trace. Contains 'inet_sock_local_*' events provided by Francis's
+     * Giraldeau lttng-modules addons branch to trace TCP events. Can be used along
+     * with {@link CtfTestTrace#DJANGO_DB} and {@link CtfTestTrace#DJANGO_HTTPD} for
+     * trace synchronization.
      *
      * <pre>
      * Trace Size: 33 MB
@@ -108,10 +108,10 @@ public enum CtfTestTrace {
     DJANGO_CLIENT("/django-benchmark/django-client", 754787, 15),
 
     /**
-     * LTTng Kernel trace. Contains 'inet_sock_local_*' events provided by
-     * Francis's Giraldeau lttng-modules addons branch to trace TCP events. Can
-     * be used along with {@link CtfTestTrace#DJANGO_CLIENT} and
-     * {@link CtfTestTrace#DJANGO_HTTPD} for trace synchronization.
+     * LTTng Kernel trace. Contains 'inet_sock_local_*' events provided by Francis's
+     * Giraldeau lttng-modules addons branch to trace TCP events. Can be used along
+     * with {@link CtfTestTrace#DJANGO_CLIENT} and {@link CtfTestTrace#DJANGO_HTTPD}
+     * for trace synchronization.
      *
      * <pre>
      * Trace Size: 28 MB
@@ -124,10 +124,10 @@ public enum CtfTestTrace {
     DJANGO_DB("/django-benchmark/django-db", 692098, 14),
 
     /**
-     * LTTng Kernel trace. Contains 'inet_sock_local_*' events provided by
-     * Francis's Giraldeau lttng-modules addons branch to trace TCP events. Can
-     * be used along with {@link CtfTestTrace#DJANGO_DB} and
-     * {@link CtfTestTrace#DJANGO_CLIENT} for trace synchronization.
+     * LTTng Kernel trace. Contains 'inet_sock_local_*' events provided by Francis's
+     * Giraldeau lttng-modules addons branch to trace TCP events. Can be used along
+     * with {@link CtfTestTrace#DJANGO_DB} and {@link CtfTestTrace#DJANGO_CLIENT}
+     * for trace synchronization.
      *
      * <pre>
      * Trace Size: 31 MB
@@ -164,8 +164,7 @@ public enum CtfTestTrace {
     CYG_PROFILE("/cyg-profile/glxgears-cyg-profile", 4977, 10),
 
     /**
-     * UST trace with lttng-ust-cyg-profile-fast events (no address in
-     * func_exit)
+     * UST trace with lttng-ust-cyg-profile-fast events (no address in func_exit)
      *
      * <pre>
      * Trace Size: 184 KB
@@ -219,20 +218,20 @@ public enum CtfTestTrace {
     /** Set of many traces, do not call getTrace */
     TRACE_EXPERIMENT("/exp", -1, -1),
 
-	/**
-	 * UST Trace with Debug Info information (dev version)
-	 *
-	 * <pre>
-	 * Trace Size: 76 KB (including index/)
-	 * Tracer: lttng-ust 2.8~pre
-	 * Event count: 41
-	 * Trace length: ~1 s
-	 * </pre>
-	 *
-	 * @deprecated Some event names were changed between the moment this trace
-	 *             was taken, and the final LTTng 2.8 release. Please use the
-	 *             updated {@link #DEBUG_INFO3} trace instead.
-	 */
+    /**
+     * UST Trace with Debug Info information (dev version)
+     *
+     * <pre>
+     * Trace Size: 76 KB (including index/)
+     * Tracer: lttng-ust 2.8~pre
+     * Event count: 41
+     * Trace length: ~1 s
+     * </pre>
+     *
+     * @deprecated Some event names were changed between the moment this trace was
+     *             taken, and the final LTTng 2.8 release. Please use the updated
+     *             {@link #DEBUG_INFO3} trace instead.
+     */
     @Deprecated
     DEBUG_INFO("/debuginfo-test-app2", 41, 1),
 
@@ -291,8 +290,8 @@ public enum CtfTestTrace {
     DEBUG_INFO_SYNTH_TWO_PROCESSES("/debuginfo-synth-two-processes", 12, 1),
 
     /**
-     * Synthetic UST trace simulating various combination of binaries with build
-     * IDs and debug links, with debug information events.
+     * Synthetic UST trace simulating various combination of binaries with build IDs
+     * and debug links, with debug information events.
      *
      * <pre>
      * Trace Size: 36 KB
@@ -333,8 +332,8 @@ public enum CtfTestTrace {
     /**
      * Kernel trace tracing the creation of multiple threads
      *
-     * This would typically used to test the vertical scaling of the analysis
-     * with many threads.
+     * This would typically used to test the vertical scaling of the analysis with
+     * many threads.
      *
      * <pre>
      * Trace Size: 8.2M
@@ -347,8 +346,8 @@ public enum CtfTestTrace {
 
     /**
      * Kernel trace of the "context-switch" experiment, which tests the clock
-     * offsetting of different traces taken on the same host with different
-     * clock offsets.
+     * offsetting of different traces taken on the same host with different clock
+     * offsets.
      *
      * <pre>
      * Trace Size: 4.6 MB
@@ -361,8 +360,8 @@ public enum CtfTestTrace {
 
     /**
      * Userspace trace of the "context-switch" experiment, which tests the clock
-     * offsetting of different traces taken on the same host with different
-     * clock offsets.
+     * offsetting of different traces taken on the same host with different clock
+     * offsets.
      *
      * <pre>
      * Trace Size: 136 KB
@@ -385,7 +384,6 @@ public enum CtfTestTrace {
      * </pre>
      */
     UNEVEN_STREAMS("/uneven-streams", 534619, 6);
-
 
     private final String fTraceName;
     private final int fNbEvent;
