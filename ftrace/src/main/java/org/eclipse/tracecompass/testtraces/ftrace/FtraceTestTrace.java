@@ -33,7 +33,7 @@ public enum FtraceTestTrace {
      * The file is obtained by running trace-cmd for the ls command: trace-cmd
      * record -e all ls on a machine with 4 CPU cores.
      */
-    TEST_2_6_4_CPU("/2.6/trace_4cpu.dat", 2880, 1),
+    TEST_2_6_MULTIPLE_CPUS("/2.6/trace_4cpu.dat", 2880, 1),
 
     /**
      * <pre>
@@ -92,7 +92,7 @@ public enum FtraceTestTrace {
      *
      * This file is an injected trace, the size of the Header Page section of this
      * trace file is injected to make it larger than the size of the file. This
-     * trace is modified from {@link FtraceTestTrace#TEST_2_6_4_CPU}.
+     * trace is modified from {@link FtraceTestTrace#TEST_2_6_MULTIPLE_CPUS}.
      */
     TEST_2_6_BAD_HEADER_PAGE_SECTION_SIZE("/2.6/trace_injected_header.dat", 2880, 1),
 
@@ -107,7 +107,7 @@ public enum FtraceTestTrace {
      *
      * This file is an injected trace, the size of the first CPU section of this
      * trace file is injected to make it larger than the size of the file. This
-     * trace is modified from {@link FtraceTestTrace#TEST_2_6_4_CPU}.
+     * trace is modified from {@link FtraceTestTrace#TEST_2_6_MULTIPLE_CPUS}.
      */
     TEST_2_6_BAD_CPU_SECTION_SIZE("/2.6/trace_injected_cpu.dat", 2880, 1);
 
