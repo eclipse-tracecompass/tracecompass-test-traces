@@ -18,8 +18,17 @@ For example:
 
 You can then point depending projects to these locations.
 
-Adding a new CTF test trace
----------------------------
+By default a snapshot version is built and deployed. To deploy a release
+version for the Maven repo, the pom.xml files need to be updated to remove the
+`SNAPSHOT` tag from pom.xml files. This is not needed when deploying p2
+update sites.
+
+Adding a new test trace (CTF or Ftrace)
+---------------------------------------
+
+Note the description below describes the procedure for CTF. For Ftrace, the
+procedure is the same. Just replace `ctf` with `ftrace` and `Ctf` with `Ftrace`
+respectively.
 
 The modules follow the [Maven standard directory layout][].
 
@@ -34,33 +43,36 @@ Make sure the parameters (event count, etc.) are correct! This project does not
 check those at the moment, but if they are incorrect they **will** fail some
 Trace Compass unit tests. This is a known issue.
 
-Finally, bump the project's minor version (1.1.0 -> 1.2.0) in the main pom.xml
+Finally, bump the project's minor version (1.7.0 -> 1.8.0) in the main pom.xml
 and related `<parent>` blocks.
 
 Deploying the repo and update site
 ----------------------------------
 
-The default `mvn deploy` goal, when run from the Eclipse CI servers, will deploy
-to the following locations:
+As opposed to the previous Eclipse CI infrastructure setup, the new setup
+doesn't have direct write access to the deployment server, and hence the Maven
+repo and p2 update site cannot be copied directly.
 
+The [Release Jenkins Job][] is now configured to deploy the artificats to the
+deployment server. A committer in the Eclipse Trace Compass project can
+trigger this build manually to make a release. After the release is done
+tag the version with the new version tag, for example `1.8.0`.
+
+* p2 update site (for use in Eclipse .target files). Replace `1.8.0` with your required version.
+  * <http://archive.eclipse.org/tracecompass/tracecompass-test-traces/repository/latest/>
+  * <http://archive.eclipse.org/tracecompass/tracecompass-test-traces/repository/1.8.0/>
 * Standard Maven repo (for use in Maven `<dependency>` blocks)
   * <http://archive.eclipse.org/tracecompass/tracecompass-test-traces/maven/>
+
+The [Nighly Jenkins Job][] is configured to deploy a nighly p2 updates site
+which is automatically triggered when the source code repository is updated.
+
 * p2 update site (for use in Eclipse .target files)
-  * <http://archive.eclipse.org/tracecompass/tracecompass-test-traces/repository/latest/>
+  * <http://archive.eclipse.org/tracecompass/tracecompass-test-traces/repository/nightly/>
 
-When pushing a new version, some extra work is required on the server to update
-the p2 update site. The `/repository/` is directory a actually a
-[p2 composite repository][]. But since the deploy simply overwrites the contents
-of `/repository/latest/`, you need to do the following steps manually:
-
-* Copy the `/latest/` directory to a new directory named after the new version,
-  like `/1.2.0/` (*copy* not *move*, please keep `/latest/` available too).
-* Add a new entry in the `compositeArtifacts.xml` and `compositeContent.xml`
-  files to point to the new directory. Do **not** delete existing entries, other
-  projects or git branches may still be using those.
-
-No extra steps are required for the Maven repo, since the Maven plugin handles
-multi-version deploying automatically.
+Note: Starting with version `1.8.0` only p2 update sites are maintained and the
+Maven repo is not deployed anymore.
 
 [Maven standard directory layout]: https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
-[p2 composite repository]: https://wiki.eclipse.org/Equinox/p2/Composite_Repositories_%28new%29
+[Release Jenkins Job]: https://ci.eclipse.org/tracecompass/view/Misc/job/tracecompass-test-traces-release
+[Nighly Jenkins Job]: https://ci.eclipse.org/tracecompass/view/Misc/job/tracecompass-test-traces-nightly
