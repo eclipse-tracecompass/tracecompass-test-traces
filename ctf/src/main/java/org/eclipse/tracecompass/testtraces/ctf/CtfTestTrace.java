@@ -383,7 +383,79 @@ public enum CtfTestTrace {
      * Trace length: ~6 s
      * </pre>
      */
-    UNEVEN_STREAMS("/uneven-streams", 534619, 6);
+    UNEVEN_STREAMS("/uneven-streams", 534619, 6),
+
+    /**
+     * Trace with one MPI communication through MPI_Ssend and MPI_Irecv operations
+     * on 2 ranks and one node. It can be used to test features related to
+     * one-to-one communications.
+     *
+     * <pre>
+     * Trace Size: 111.3 KB
+     * Tracer: Score-p 7.1
+     * Event count: 637
+     * Trace length: ~339 ms
+     * </pre>
+     */
+    MPI_SSEND_IRECV("/mpi_ssend_irecv", 637, 1),
+
+    /**
+     * Trace with one MPI communication through MPI_Gather operation on 4 ranks and
+     * one node. It can be used to test features related to all-to-one
+     * communications.
+     *
+     * <pre>
+     * Trace Size: 119.3 KB
+     * Tracer: Score-p 7.1
+     * Event count: 682
+     * Trace length: ~2.32 s
+     * </pre>
+     */
+    MPI_GATHER("/mpi_gather", 682, 3),
+
+    /**
+     * Trace with MPI_Allreduce communications done on two different communicators.
+     * There are 8 MPI ranks on one node. It can be used to test views related to
+     * communicators and all-to-all communications.
+     *
+     * <pre>
+     * Trace Size: 135.3 KB
+     * Tracer: Score-p 7.1
+     * Event count: 891
+     * Trace length: ~2.27 s
+     * </pre>
+     */
+    MPI_ALLREDUCE("/mpi_allreduce", 891, 3),
+
+    /**
+     * Trace of a program using MPI and the pthread library on each MPI rank. There
+     * are 4 MPI ranks shared between two remote nodes. Each rank creates 2
+     * additional threads. It can be used to test the system tree architecture.
+     *
+     * <pre>
+     * Trace Size: 161.3 KB
+     * Tracer: Score-p 7.1
+     * Event count: 870
+     * Trace length: ~1.5 s
+     * </pre>
+     */
+    MPI_PTHREAD("/mpi_pthread", 870, 2),
+
+    /**
+     * Trace of a program doing regular communications between 4 MPI ranks on 2
+     * remote nodes. During the program execution, the network bandwidth of one of
+     * the nodes is artificially limited (to simulate a network issue for example)
+     * and later restored. It can be used to test OTF2 views related to the
+     * bandwidth and communications.
+     *
+     * <pre>
+     * Trace Size: 151.3 KB
+     * Tracer: Score-p 7.1
+     * Event count: 1680
+     * Trace length: ~49.26 s
+     * </pre>
+     */
+    BANDWIDTH_ISSUE("/bandwidth_issue", 1680, 50);
 
     private final String fTraceName;
     private final int fNbEvent;
