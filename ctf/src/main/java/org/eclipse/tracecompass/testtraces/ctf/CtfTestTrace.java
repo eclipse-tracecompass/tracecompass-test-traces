@@ -458,6 +458,19 @@ public enum CtfTestTrace {
     BANDWIDTH_ISSUE("/bandwidth_issue", 1680, 50),
 
     /**
+     * Trace of a program doing 5 MPI communications between two remote nodes. Two
+     * PAPI metrics have also been recorded during program execution.
+     *
+     * <pre>
+     * Trace Size: 120.3 KB
+     * Tracer: Score-p 7.1
+     * Event count: 873
+     * Trace length: ~640.2 ms
+     * </pre>
+     */
+    PAPI_COUNTERS("/papi_counters", 873, 1),
+
+    /**
      * Trace of a simple ROS 2 system obtained using:
      * https://github.com/christophebedard/ros2-message-flow-analysis/blob/main/examples/example-2_trivial.launch.py
      *
