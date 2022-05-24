@@ -481,7 +481,21 @@ public enum CtfTestTrace {
      * Trace length: ~10.2 s
      * </pre>
      */
-    ROS2("/ros2", 99338, 11);
+    ROS2("/ros2", 99338, 11),
+
+    /**
+     * Trace of a program with 2 MPI ranks doing an MPI_Sendrecv operation. System
+     * and user times are recorded through rusage. This trace can be used as an
+     * example for metrics that should be registered as doubles.
+     *
+     * <pre>
+     * Trace Size: 112.3 KB
+     * Tracer: Score-p 7.1
+     * Event count: 693
+     * Trace length: ~76.4 ms
+     * </pre>
+     */
+    DOUBLE_COUNTERS("/double_counters", 693, 1);
 
     private final String fTraceName;
     private final int fNbEvent;
