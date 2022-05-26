@@ -455,7 +455,20 @@ public enum CtfTestTrace {
      * Trace length: ~49.26 s
      * </pre>
      */
-    BANDWIDTH_ISSUE("/bandwidth_issue", 1680, 50);
+    BANDWIDTH_ISSUE("/bandwidth_issue", 1680, 50),
+
+    /**
+     * Trace of a simple ROS 2 system obtained using:
+     * https://github.com/christophebedard/ros2-message-flow-analysis/blob/main/examples/example-2_trivial.launch.py
+     *
+     * <pre>
+     * Trace Size: 4.1 MB
+     * Tracer: lttng-ust 2.11.0
+     * Event count: 99338
+     * Trace length: ~10.2 s
+     * </pre>
+     */
+    ROS2("/ros2", 99338, 11);
 
     private final String fTraceName;
     private final int fNbEvent;
