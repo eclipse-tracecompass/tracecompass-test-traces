@@ -474,7 +474,7 @@ public enum CtfTestTrace {
     private final int fNbEvent;
     private int fDuration;
 
-    private CtfTestTrace(String traceName, int nbEvent, int time) {
+    CtfTestTrace(String traceName, int nbEvent, int time) {
         fTraceName = traceName;
         fNbEvent = nbEvent;
         fDuration = time;
