@@ -495,7 +495,22 @@ public enum CtfTestTrace {
      * Trace length: ~76.4 ms
      * </pre>
      */
-    DOUBLE_COUNTERS("/double_counters", 693, 1);
+    DOUBLE_COUNTERS("/double_counters", 693, 1),
+    
+    
+    /**
+     * Trace of a DPDK sample application named service cores. This trace can
+     * be used to test the logical core analysis. More details can be found
+     * here: https://doc.dpdk.org/guides/sample_app_ug/service_cores.html
+     * 
+     * <pre>
+     * Trace Size: 1.2 MB
+     * Tracer: DPDK Trace library
+     * Event count: 66464
+     * Trace length: ~24.1 s
+     * </pre>
+     */
+    DPDK_SERVICE_CORES("/dpdk_service_cores", 66464, 25);
 
     private final String fTraceName;
     private final int fNbEvent;
