@@ -1,7 +1,8 @@
-Trace Compass Test Traces
-=========================
+# Trace Compass Test Traces
 
-This tree contains a set of CTF test traces, primarily for use in Trace Compass.
+This repository contains contains a set of CTF and Ftrace test traces, primarily for use in Trace Compass. They are intented to be used for implementing automated tests, such as JUnit tests.
+
+## Building the maven repo
 
 To build the package and install it in your local Maven repo, simply isssue
 
@@ -23,31 +24,15 @@ version for the Maven repo, the pom.xml files need to be updated to remove the
 `SNAPSHOT` tag from pom.xml files. This is not needed when deploying p2
 update sites.
 
-Adding a new test trace (CTF or Ftrace)
----------------------------------------
+## Adding a new test trace (CTF or Ftrace)
 
-Note the description below describes the procedure for CTF. For Ftrace, the
-procedure is the same. Just replace `ctf` with `ftrace` and `Ctf` with `Ftrace`
-respectively.
+Read our [contributor guide](CONTRIBUTING.md) and follow the instructions to contribute code.
 
-The modules follow the [Maven standard directory layout][].
+When contributing a new test trace, please make sure that it only contains content that you are 
+allowed to share in open source.
 
-To add a new CTF test trace, add it to the `ctf/src/main/resources` directory.
-Make sure it is not archived or anything, as this will be exposed as-is to the
-users.
 
-Then update the `ctf/src/main/java/.../CtfTestTrace.java` file accordingly to
-include the new trace.
-
-Make sure the parameters (event count, etc.) are correct! This project does not
-check those at the moment, but if they are incorrect they **will** fail some
-Trace Compass unit tests. This is a known issue.
-
-Finally, bump the project's minor version (1.7.0 -> 1.8.0) in the main pom.xml
-and related `<parent>` blocks.
-
-Deploying the repo and update site
-----------------------------------
+## Deploying the repo and update site
 
 As opposed to the previous Eclipse CI infrastructure setup, the new setup
 doesn't have direct write access to the deployment server, and hence the Maven
@@ -74,5 +59,5 @@ Note: Starting with version `1.8.0` only p2 update sites are maintained and the
 Maven repo is not deployed anymore.
 
 [Maven standard directory layout]: https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
-[Release Jenkins Job]: https://ci.eclipse.org/tracecompass/view/Misc/job/tracecompass-test-traces-release
-[Nighly Jenkins Job]: https://ci.eclipse.org/tracecompass/view/Misc/job/tracecompass-test-traces-nightly
+[Release Jenkins Job]: https://ci.eclipse.org/tracecompass/job/tracecompass-test-traces-release
+[Nighly Jenkins Job]: https://ci.eclipse.org/tracecompass/job/tracecompass-test-traces-nightly/
