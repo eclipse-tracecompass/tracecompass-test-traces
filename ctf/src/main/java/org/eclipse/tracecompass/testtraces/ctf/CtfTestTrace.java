@@ -496,8 +496,7 @@ public enum CtfTestTrace {
      * </pre>
      */
     DOUBLE_COUNTERS("/double_counters", 693, 1),
-    
-    
+
     /**
      * Trace of a DPDK sample application named service cores. This trace can
      * be used to test the logical core analysis. More details can be found
@@ -511,6 +510,19 @@ public enum CtfTestTrace {
      * </pre>
      */
     DPDK_SERVICE_CORES("/dpdk_service_cores", 66464, 25);
+
+    /**
+     * Trace collected on an aarch64 system containing some events with a
+     * lttng_ust_field_sequence field with a uint32_t length type and a 0 length.
+     *
+     * <pre>
+     * Trace Size: 58.0 kB
+     * Tracer: lttng-ust 2.13.5
+     * Event count: 10
+     * Trace length: ~1.12 s
+     * </pre>
+     */
+    CTF_SEQUENCE_EMPTY("/ctf-sequence-empty", 10, 2)
 
     private final String fTraceName;
     private final int fNbEvent;
