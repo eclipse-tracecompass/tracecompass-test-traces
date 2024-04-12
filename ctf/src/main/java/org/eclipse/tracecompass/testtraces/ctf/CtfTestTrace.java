@@ -509,7 +509,7 @@ public enum CtfTestTrace {
      * Trace length: ~24.1 s
      * </pre>
      */
-    DPDK_SERVICE_CORES("/dpdk_service_cores", 66464, 25);
+    DPDK_SERVICE_CORES("/dpdk_service_cores", 66464, 25),
 
     /**
      * Trace collected on an aarch64 system containing some events with a
@@ -522,7 +522,7 @@ public enum CtfTestTrace {
      * Trace length: ~1.12 s
      * </pre>
      */
-    CTF_SEQUENCE_EMPTY("/ctf-sequence-empty", 10, 2)
+    CTF_SEQUENCE_EMPTY("/ctf-sequence-empty", 10, 2);
 
     private final String fTraceName;
     private final int fNbEvent;
