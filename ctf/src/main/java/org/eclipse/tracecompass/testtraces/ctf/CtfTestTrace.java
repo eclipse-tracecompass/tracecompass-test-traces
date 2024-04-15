@@ -519,10 +519,10 @@ public enum CtfTestTrace {
      * Trace Size: 58.0 kB
      * Tracer: lttng-ust 2.13.5
      * Event count: 10
-     * Trace length: ~1.12 s
+     * Trace length: ~0.054627 ms
      * </pre>
      */
-    CTF_SEQUENCE_EMPTY("/ctf-sequence-empty", 10, 2);
+    CTF_SEQUENCE_EMPTY("/ctf-sequence-empty", 10, 1);
 
     private final String fTraceName;
     private final int fNbEvent;
