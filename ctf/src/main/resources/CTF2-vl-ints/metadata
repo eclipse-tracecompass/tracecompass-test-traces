@@ -1,0 +1,168 @@
+{
+    "type": "preamble", 
+    "version": 2
+}
+{
+    "type": "trace-class"
+}
+{
+    "type": "data-stream-class"
+}
+{
+    "name": "test", 
+    "payload-field-class": {
+        "member-classes": [
+            {
+                "field-class": {
+                    "type": "variable-length-unsigned-integer"
+                }, 
+                "name": "vu1a"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-unsigned-integer"
+                }, 
+                "name": "vu1b"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-unsigned-integer"
+                }, 
+                "name": "vu2"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-unsigned-integer"
+                }, 
+                "name": "vu3"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-unsigned-integer"
+                }, 
+                "name": "vu4"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-unsigned-integer"
+                }, 
+                "name": "vu5"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-unsigned-integer"
+                },
+                "name": "vu6"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-unsigned-integer"
+                }, 
+                "name": "vu7"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-unsigned-integer"
+                }, "name": "vu8"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-unsigned-integer"
+                }, 
+                "name": "vu9"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-unsigned-integer"
+                }, 
+                "name": "vu10"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi1a"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi1b"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi1c"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi2"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi3"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi4"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi5"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi6"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi7"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi8"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi9"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi10a"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi10b"
+            }, 
+            {
+                "field-class": {
+                    "type": "variable-length-signed-integer"
+                }, 
+                "name": "vi10c"
+            }
+        ], 
+        "type": "structure"
+    }, 
+    "type": "event-record-class"
+}

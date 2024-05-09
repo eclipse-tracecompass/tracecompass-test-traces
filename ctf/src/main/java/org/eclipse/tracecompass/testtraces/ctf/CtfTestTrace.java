@@ -522,7 +522,23 @@ public enum CtfTestTrace {
      * Trace length: ~0.054627 ms
      * </pre>
      */
-    CTF_SEQUENCE_EMPTY("/ctf-sequence-empty", 10, 1);
+    CTF_SEQUENCE_EMPTY("/ctf-sequence-empty", 10, 1),
+    
+    /**
+     * Data test trace collected from yactfr:
+     * https://github.com/eepp/yactfr/blob/master/tests/tests-iter-data/ctf-2/pass-vl-ints.streams
+     * 
+     * Please note that this is a data test trace, therefore it does not contain non-data features 
+     * such as attributes or a preferred display integer base.
+     *
+     * <pre>
+     * Trace Size: 4.82 kB
+     * Tracer: hand-generated
+     * Event count: 1
+     * Trace length: 0
+     * </pre>
+     */
+    CTF2_VL_INTS("/CTF2-vl-ints", 1, 0);
 
     private final String fTraceName;
     private final int fNbEvent;
