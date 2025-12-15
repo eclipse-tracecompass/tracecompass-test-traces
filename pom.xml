@@ -46,6 +46,7 @@
   <modules>
     <module>ctf</module>
     <module>ftrace</module>
+    <module>uftrace</module>
     <module>update-site</module>
   </modules>
 
